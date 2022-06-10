@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-class Aluno // Classe
+class Aluno
 {
-    public $nome; // atributo
-    public $cpf; // atributo
+  public string $nome;
+  public string $cpf;
 }
