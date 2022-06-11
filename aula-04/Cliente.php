@@ -5,6 +5,11 @@ declare(strict_types=1);
 class Cliente extends Usuario
 {
   private string $dataCadastro;
+  
+  public function __construct(string $email, string $senha)
+  {
+    parent::__construct($email, $senha);
+  }
 
   /**
    * @return string
