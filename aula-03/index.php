@@ -1,6 +1,13 @@
 <?php
 
 include 'Produto.php';
+include 'Categoria.php';
+
+$c1 = new Categoria('Roupas', 'Roupas Unissex');
+$c2 = new Categoria('Imóveis', 'Para mobiliar sua casa!!');
+
+var_dump($c1);
+var_dump($c2);
 
 $p1 = new Produto('Tênis para corrida', 350);
 $p2 = new Produto('Calça Jeans', 94.5);
