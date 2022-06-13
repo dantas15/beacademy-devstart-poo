@@ -1,16 +1,25 @@
 <?php
 
-include 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Classes\Config\Usuario;
-use Classes\Categoria;
+use Dompdf\Dompdf;
 
-//$us1 = new Classes\Usuario();
-//$us2 = new UsuarioConfig();
+// instantiate and use the dompdf class
+$dompdf = new DOMPDF();
 
-$us2 = new Usuario();
+$html = '';
 
-$c2 = new Categoria();
+for ($i = 0; $i < 10; $i++) {
+  $html .= '<p> teste </p>';
+}
 
-var_dump($us2);
-var_dump($c2);
+$dompdf->loadHtml($html);
+
+// (Optional) Setup the paper size and orientation
+$dompdf->setPaper('A4', 'landscape');
+
+// Render the HTML as PDF
+$dompdf->render();
+
+// Output the generated PDF to Browser
+$dompdf->stream();
